@@ -1,0 +1,182 @@
+/* HomePage.css */
+.homepage-container {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  }
+
+  
+  .homepage-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .nav-buttons {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .nav-button:focus {
+  outline: none;
+  border-bottom: 2px solid #007bff;
+  background-color: #e0f0ff;
+}
+  
+  .nav-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+    padding: 0.3rem 0.5rem;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .nav-button:hover {
+    color: #007bff;
+  }
+  
+  .language-toggle {
+    flex-shrink: 0;
+  }
+  
+  .language-button {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .language-button:hover {
+    background-color: #e0e0e0;
+    color: #000;
+  }
+  
+  .homepage-main {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 3rem;
+    min-height: 80vh;
+  }
+  
+  .left-panel {
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 2rem;
+    border-right: 1px solid #ddd;
+    padding-top: 2rem;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    object-fit: cover;
+  }
+  
+  .profile-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .contact-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-icons a {
+    color: #333;
+    font-size: 1.8rem;
+  }
+  
+  .download-cv {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: #e0e0e0;
+    color: #333;
+    border-radius: 999px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-cv:hover {
+    background-color: #d5d5d5;
+  }
+  
+  .right-panel {
+    flex: 1;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #333;
+  }
+  
+  .profile-subtitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .profile-intro {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  
+
+  /* 頁腳樣式 */
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    color: #666;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ccc;
+  }
+  
+ 
+  .subtitle-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+  
+  .cert-badge-inline {
+    width: 50px;
+    height: auto;
+    margin-top: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .cert-badge-inline:hover {
+    transform: scale(1.05);
+  }
+  
+  

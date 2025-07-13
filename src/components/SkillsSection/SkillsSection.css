@@ -1,0 +1,38 @@
+.skill-card {
+    flex: 1 1 250px;
+    min-width: 250px;
+    max-width: 260px;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .skill-card h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.4rem;
+  }
+  
+  .skill-card .label {
+    font-size: 0.9rem;
+    color: #007bff;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+  
+  .skill-card .description {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.4;
+  }
+  
