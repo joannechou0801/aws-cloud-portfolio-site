@@ -21,8 +21,8 @@ const SkillsSection = forwardRef(({ language }, ref) => {
         {
           title: '版本控制與自動化',
           image: '/images/skillspage/git.png',
-          label: 'Git / Basic CI',
-          description: '具基本 Git 版本控制經驗，曾於多個專案中實作協作與程式管理。',
+          label: 'Git / Basic CI/CD',
+          description: '具 Git 版本控制與基本 CI/CD 經驗，能建置自動化部署流程至 AWS S3 與 CloudFront。',
         },
       ],
     },
@@ -44,8 +44,8 @@ const SkillsSection = forwardRef(({ language }, ref) => {
         {
           title: 'Version Control & Automation',
           image: '/images/skillspage/git.png',
-          label: 'Git / Basic CI',
-          description: 'Basic experience with Git version control; used in multiple academic and collaborative projects.',
+          label: 'Git / Basic CI/CD',
+          description: 'Experience with Git and basic CI/CD; implemented auto-deploy workflows to AWS S3 and CloudFront.',
         },
       ],
     },
