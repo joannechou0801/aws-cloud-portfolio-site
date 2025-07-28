@@ -3,6 +3,8 @@ import AboutSection from '../AboutSection/AboutSection.jsx';
 import SkillsSection from '../SkillsSection/SkillsSection.jsx';
 import ProjectsSection from '../ProjectsSection/ProjectsSection.jsx';
 import { FaGithub, FaEnvelope } from 'react-icons/fa';
+import { SiHashnode } from 'react-icons/si';
+
 import './HomePage.css';
 
 export default function HomePage() {
@@ -82,6 +84,15 @@ export default function HomePage() {
             <a href="https://github.com/joannechou0801" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FaGithub />
             </a>
+
+  <a
+    href="https://cloud-journey.hashnode.dev"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Hashnode Blog"
+ >
+  <SiHashnode />
+</a>
             <a href="mailto:joannechou0801@gmail.com" aria-label="Email">
               <FaEnvelope />
             </a>
