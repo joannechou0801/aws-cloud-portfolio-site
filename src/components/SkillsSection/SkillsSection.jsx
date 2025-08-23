@@ -1,5 +1,5 @@
-import React, { forwardRef } from 'react';
-import './SkillsSection.css'; // 新增這行：引入樣式表
+import React, { forwardRef } from 'react'
+import './SkillsSection.css' // 新增這行：引入樣式表
 
 const SkillsSection = forwardRef(({ language }, ref) => {
   const content = {
@@ -16,16 +16,19 @@ const SkillsSection = forwardRef(({ language }, ref) => {
           title: 'AWS 雲端技術',
           image: '/images/skillspage/aws.png',
           label: 'AWS',
-          description: '具備 AWS 架構與開發經驗，持有 Cloud Practitioner 證照，並持續進修架構師等進階技能。',
+          description:
+            '具備 AWS 架構與開發經驗，持有 Cloud Practitioner 證照，並持續進修架構師等進階技能。',
         },
         {
           title: '版本控制與自動化',
           image: '/images/skillspage/git.png',
           label: 'Git / Basic CI/CD',
-          description: '具 Git 版本控制與基本 CI/CD 經驗，能建置自動化部署流程至 AWS S3 與 CloudFront。',
+          description:
+            '具 Git 版本控制與基本 CI/CD 經驗，能建置自動化部署流程至 AWS S3 與 CloudFront。',
         },
       ],
     },
+
     en: {
       sectionTitle: 'Technical Skills',
       skills: [
@@ -39,19 +42,21 @@ const SkillsSection = forwardRef(({ language }, ref) => {
           title: 'AWS Cloud Technologies',
           image: '/images/skillspage/aws.png',
           label: 'AWS',
-          description: 'Experience in AWS architecture and development; Cloud Practitioner certified.',
+          description:
+            'Experience in AWS architecture and development; Cloud Practitioner certified.',
         },
         {
           title: 'Version Control & Automation',
           image: '/images/skillspage/git.png',
           label: 'Git / Basic CI/CD',
-          description: 'Experience with Git and basic CI/CD; implemented auto-deploy workflows to AWS S3 and CloudFront.',
+          description:
+            'Experience with Git and basic CI/CD; implemented auto-deploy workflows to AWS S3 and CloudFront.',
         },
       ],
     },
-  };
+  }
 
-  const c = content[language];
+  const c = content[language]
 
   return (
     <section
@@ -62,7 +67,14 @@ const SkillsSection = forwardRef(({ language }, ref) => {
         borderBottom: '1px solid #ccc',
       }}
     >
-      <h2 style={{ fontSize: '1.8rem', color: '#333', marginBottom: '2.5rem', textAlign: 'center' }}>
+      <h2
+        style={{
+          fontSize: '1.8rem',
+          color: '#333',
+          marginBottom: '2.5rem',
+          textAlign: 'center',
+        }}
+      >
         {c.sectionTitle}
       </h2>
 
@@ -88,7 +100,7 @@ const SkillsSection = forwardRef(({ language }, ref) => {
         ))}
       </div>
     </section>
-  );
-});
+  )
+})
 
-export default SkillsSection;
+export default SkillsSection

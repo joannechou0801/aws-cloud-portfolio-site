@@ -1,370 +1,367 @@
 .projects-section {
-    position: relative;
-    padding: 5rem 3rem 8rem;
-    background-color: #eaeaea;
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  }
-  
-  .projects-title {
-    text-align: center;
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 2.5rem;
-  }
-  
-  .projects-tab-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: -1rem;
-    margin-bottom: 2.5rem;
-  }
-  
-  .tab-button {
-    padding: 0.4rem 1rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-    border: 1px solid #ccc;
-    background-color: #f4f4f4;
-    border-radius: 999px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .tab-button:hover {
-    background-color: #e0e0e0;
-  }
-  
-  .tab-button.active {
-    background-color: #ccc;
-    color: #333;
-  }
-  
-  /* ========== 技術開發專案區塊：Carousel Styles ========== */
+  position: relative;
+  padding: 5rem 3rem 8rem;
+  background-color: #eaeaea;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
 
-  .carousel-focus-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1060px;
-    margin: 0 auto;
-    gap: 2rem;
-    overflow: visible; 
-    box-sizing: border-box;
-    padding-top: 0rem;
-  }
-  
-  .carousel-focus-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    flex: 1;
-    max-width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
-  
-  .carousel-focus-container .hover-card {
-    transition: transform 0.4s ease, opacity 0.4s ease, filter 0.4s ease;
-    opacity: 0.3;
-    transform: scale(0.8);
-    filter: blur(1px);
-    pointer-events: none;
-    z-index: 1;
-  }
-  
-  .carousel-focus-container .center-card {
-    opacity: 1;
-    transform: scale(1);
-    filter: none;
-    pointer-events: auto;
-    z-index: 2;
-  }
-  
-  /* 箭頭放上方，左右分開，中間對齊 */
-  .carousel-arrow-wrapper {
-    position: absolute;
-    height: 100%; 
-    top: 50%;
-    left: 0;
-    right: 0;
-    z-index: 5;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
-    transform: translateY(-50%);
-    pointer-events: none; /* 不擋滑鼠 */
-  }
-  
-  .carousel-arrow {
-    font-size: 2.5rem;
-    background: none;
-    border: none;
-    color: #333;
-    cursor: pointer;
-    padding: 0.2rem 0.5rem;
-    transition: color 0.2s ease;
-    user-select: none;
-    pointer-events: auto; 
-  }
-  
-  .carousel-arrow:hover {
-    color: #007bff;
-  }
+.projects-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 2.5rem;
+}
 
-  .carousel-arrow:focus {
-    outline: none;
-  }
-  
-  /* ========== 卡片樣式 ========== */
-  
-  .hover-card {
-    position: relative;
-    width: 500px;
-    height: 250px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .hover-card.tall-card {
-    width: 220px;
-    height: 420px;
-  }
-  
-  .hover-card:hover {
-    transform: translateY(-4px);
-  }
-  
-  .hover-card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(40, 40, 40, 0.6);
-    color: white;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1.2rem;
-    text-align: center;
-  }
-  
-  .hover-card:hover .hover-card-overlay {
-    opacity: 1;
-  }
-  
-  .hover-card-overlay-content {
-    max-width: 280px;
-    margin: 0 auto;
-    padding-left: 0;
-  }
-  
-  .hover-card-overlay h3 {
-    font-size: 1rem;
-    margin-bottom: 0.8rem;
-    line-height: 1.4;
-    word-break: break-word;
-    padding-right: 1.7rem;
-  }
-  
-  .tall-card .hover-card-overlay h3 {
-    font-size: 0.9rem;
-    text-align: left;
-  }
-  
-  .hover-card:not(.tall-card) .hover-card-buttons {
-    display: flex;
-    justify-content: center;
-    padding-right: 1rem;
-    gap: 0.8rem;
-  }
-  
-  .tall-card .hover-card-buttons {
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 1.2rem;
-    text-align: left;
-    width: 100%;
-    box-sizing: border-box;
-    row-gap: 0.5rem;
-  }
-  
-  .project-button {
-    background-color: #ffffff;
-    color: #333;
-    text-decoration: none;
-    padding: 0.4rem 0.9rem;
-    border-radius: 999px;
-    font-size: 0.75rem;
-    font-weight: 550;
-    transition: background-color 0.3s ease;
-  }
-  
-  .project-button:hover {
-    background-color: #ddd;
-  }
-  
-  .mockup-frame {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    height: 100%;
-    background: #111;
-    border-radius: 28px;
-    padding: 0.9rem 0.35rem;
-    box-shadow: inset 0 0 0 1.5px #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    position: relative;
-  }
-  
-  .mockup-screen-image {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    border-radius: 10px;
-  }
-  
+.projects-tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: -1rem;
+  margin-bottom: 2.5rem;
+}
 
-  .desktop-mockup-frame {
-    background: #111;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-  }
-  
-  .browser-bar {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    height: 18px;
-    background: #2b2b2b;
-    padding: 0 0.6rem;
-  }
-  
-  .dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  
-  .dot.red {
-    background-color: #ff5f57;
-  }
-  
-  .dot.yellow {
-    background-color: #ffbd2e;
-  }
-  
-  .dot.green {
-    background-color: #28c840;
-  }
-  
-  .desktop-mockup-image {
-    flex: 1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.tab-button {
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
 
-  
-  /* ========== 研究成果區塊 ========== */
-  
-  .research-content {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 3rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 1.5rem 2rem;
-    border-radius: 16px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-    color: #222;
-    font-size: 1rem;
-    align-items: center;
-  }
-  
-  .research-left {
-    flex: 1 1 280px;
-    max-width: 280px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .certificate-image {
-    max-width: 220px;
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-    object-fit: contain;
-    user-select: none;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .certificate-image:hover {
-    transform: scale(1.5);
-    z-index: 10;
-    position: relative;
-  }
-  
-  .research-download-button {
-    background-color: #3b82f6;
-    color: white;
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding: 0.5rem 1.4rem;
-    border-radius: 999px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    display: inline-block;
-    text-align: center;
-  }
-  
-  .research-download-button:hover {
-    background-color: #2563eb;
-  }
-  
-  .research-right {
-    flex: 1 1 380px;
-    max-width: 650px;
-    text-align: left;
-  }
-  
-  .research-right h3 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  
-  .research-description {
-    line-height: 1.6;
-    color: #444;
-    white-space: pre-line;
-  }
-  
-  .research-description strong {
-    color: #333;
-  }
-  
+.tab-button:hover {
+  background-color: #e0e0e0;
+}
+
+.tab-button.active {
+  background-color: #ccc;
+  color: #333;
+}
+
+/* ========== 技術開發專案區塊：Carousel Styles ========== */
+
+.carousel-focus-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1060px;
+  margin: 0 auto;
+  gap: 2rem;
+  overflow: visible;
+  box-sizing: border-box;
+  padding-top: 0rem;
+}
+
+.carousel-focus-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex: 1;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.carousel-focus-container .hover-card {
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease,
+    filter 0.4s ease;
+  opacity: 0.3;
+  transform: scale(0.8);
+  filter: blur(1px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.carousel-focus-container .center-card {
+  opacity: 1;
+  transform: scale(1);
+  filter: none;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+/* 箭頭放上方，左右分開，中間對齊 */
+.carousel-arrow-wrapper {
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  transform: translateY(-50%);
+  pointer-events: none; /* 不擋滑鼠 */
+}
+
+.carousel-arrow {
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  transition: color 0.2s ease;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.carousel-arrow:hover {
+  color: #007bff;
+}
+
+.carousel-arrow:focus {
+  outline: none;
+}
+
+/* ========== 卡片樣式 ========== */
+
+.hover-card {
+  position: relative;
+  width: 500px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.hover-card.tall-card {
+  width: 220px;
+  height: 420px;
+}
+
+.hover-card:hover {
+  transform: translateY(-4px);
+}
+
+.hover-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40, 40, 40, 0.6);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.hover-card:hover .hover-card-overlay {
+  opacity: 1;
+}
+
+.hover-card-overlay-content {
+  max-width: 280px;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+.hover-card-overlay h3 {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+  word-break: break-word;
+  padding-right: 1.7rem;
+}
+
+.tall-card .hover-card-overlay h3 {
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.hover-card:not(.tall-card) .hover-card-buttons {
+  display: flex;
+  justify-content: center;
+  padding-right: 2rem;
+  gap: 0.8rem;
+}
+
+.tall-card .hover-card-buttons {
+  display: flex;
+  justify-content: center; /* 改成置中 */
+  padding-right: 2.5rem;
+  gap: 0.8rem;
+}
+
+.project-button {
+  background-color: #ffffff;
+  color: #333;
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 550;
+  transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+  background-color: #ddd;
+}
+
+.mockup-frame {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 100%;
+  background: #111;
+  border-radius: 28px;
+  padding: 0.9rem 0.35rem;
+  box-shadow: inset 0 0 0 1.5px #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.mockup-screen-image {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+.desktop-mockup-frame {
+  background: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 18px;
+  background: #2b2b2b;
+  padding: 0 0.6rem;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.red {
+  background-color: #ff5f57;
+}
+
+.dot.yellow {
+  background-color: #ffbd2e;
+}
+
+.dot.green {
+  background-color: #28c840;
+}
+
+.desktop-mockup-image {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========== 研究成果區塊 ========== */
+
+.research-content {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  color: #222;
+  font-size: 1rem;
+  align-items: center;
+}
+
+.research-left {
+  flex: 1 1 280px;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.certificate-image {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  object-fit: contain;
+  user-select: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.certificate-image:hover {
+  transform: scale(1.5);
+  z-index: 10;
+  position: relative;
+}
+
+.research-download-button {
+  background-color: #3b82f6;
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 1.4rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.research-download-button:hover {
+  background-color: #2563eb;
+}
+
+.research-right {
+  flex: 1 1 380px;
+  max-width: 650px;
+  text-align: left;
+}
+
+.research-right h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.research-description {
+  line-height: 1.6;
+  color: #444;
+  white-space: pre-line;
+}
+
+.research-description strong {
+  color: #333;
+}

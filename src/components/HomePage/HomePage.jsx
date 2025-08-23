@@ -1,21 +1,21 @@
-import { useState, useRef } from 'react';
-import AboutSection from '../AboutSection/AboutSection.jsx';
-import SkillsSection from '../SkillsSection/SkillsSection.jsx';
-import ProjectsSection from '../ProjectsSection/ProjectsSection.jsx';
-import { FaGithub, FaEnvelope } from 'react-icons/fa';
-import { SiHashnode } from 'react-icons/si';
+import { useState, useRef } from 'react'
+import AboutSection from '../AboutSection/AboutSection.jsx'
+import SkillsSection from '../SkillsSection/SkillsSection.jsx'
+import ProjectsSection from '../ProjectsSection/ProjectsSection.jsx'
+import { FaGithub, FaEnvelope } from 'react-icons/fa'
+import { SiHashnode } from 'react-icons/si'
 
-import './HomePage.css';
+import './HomePage.css'
 
 export default function HomePage() {
-  const [language, setLanguage] = useState('zh');
-  const aboutRef = useRef(null);
-  const skillsRef = useRef(null);
-  const projectsRef = useRef(null);
+  const [language, setLanguage] = useState('zh')
+  const aboutRef = useRef(null)
+  const skillsRef = useRef(null)
+  const projectsRef = useRef(null)
 
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === 'zh' ? 'en' : 'zh'));
-  };
+    setLanguage((prev) => (prev === 'zh' ? 'en' : 'zh'))
+  }
 
   const content = {
     zh: {
@@ -40,30 +40,29 @@ export default function HomePage() {
         'aiming to independently design and manage cloud systems.',
       nav: ['Home', 'About', 'Skills', 'Projects'],
     },
-  };
+  }
 
   const handleNavClick = (item) => {
     if ((language === 'zh' && item === '首頁') || (language === 'en' && item === 'Home')) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     } else if ((language === 'zh' && item === '簡介') || (language === 'en' && item === 'About')) {
-      aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
+      aboutRef.current?.scrollIntoView({ behavior: 'smooth' })
     } else if ((language === 'zh' && item === '技能') || (language === 'en' && item === 'Skills')) {
-      skillsRef.current?.scrollIntoView({ behavior: 'smooth' });
-    } else if ((language === 'zh' && item === '作品集') || (language === 'en' && item === 'Projects')) {
-      projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
+      skillsRef.current?.scrollIntoView({ behavior: 'smooth' })
+    } else if (
+      (language === 'zh' && item === '作品集') ||
+      (language === 'en' && item === 'Projects')
+    ) {
+      projectsRef.current?.scrollIntoView({ behavior: 'smooth' })
     }
-  };
+  }
 
   return (
     <div className="homepage-container">
       <nav className="homepage-nav">
         <div className="nav-buttons">
           {content[language].nav.map((item, idx) => (
-            <button
-              key={idx}
-              className="nav-button"
-              onClick={() => handleNavClick(item)}
-            >
+            <button key={idx} className="nav-button" onClick={() => handleNavClick(item)}>
               {item}
             </button>
           ))}
@@ -81,18 +80,23 @@ export default function HomePage() {
           <h2 className="profile-name">{content[language].name}</h2>
 
           <div className="contact-icons">
-            <a href="https://github.com/joannechou0801" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a
+              href="https://github.com/joannechou-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
               <FaGithub />
             </a>
 
-  <a
-    href="https://cloud-journey.hashnode.dev"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Hashnode Blog"
- >
-  <SiHashnode />
-</a>
+            <a
+              href="https://cloud-journey.hashnode.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Hashnode Blog"
+            >
+              <SiHashnode />
+            </a>
             <a href="mailto:joannechou0801@gmail.com" aria-label="Email">
               <FaEnvelope />
             </a>
@@ -127,9 +131,7 @@ export default function HomePage() {
       <SkillsSection ref={skillsRef} language={language} />
       <ProjectsSection ref={projectsRef} language={language} />
 
-      <footer className="footer">
-        © 2025 Joanne Chou. All rights reserved.
-      </footer>
+      <footer className="footer">© 2025 Joanne Chou. All rights reserved.</footer>
     </div>
-  );
+  )
 }
