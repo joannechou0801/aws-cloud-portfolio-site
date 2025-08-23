@@ -177,3 +177,35 @@
 .cert-badge-inline:hover {
   transform: scale(1.05);
 }
+
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .homepage-main {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .left-panel {
+    flex: unset;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+  }
+
+  .right-panel {
+    padding-left: 0;
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .nav-buttons {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}

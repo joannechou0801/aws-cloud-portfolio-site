@@ -365,3 +365,43 @@
 .research-description strong {
   color: #333;
 }
+
+
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .projects-tab-buttons {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .carousel-focus-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hover-card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .research-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .research-left,
+  .research-right {
+    max-width: 100%;
+  }
+
+  .certificate-image {
+    max-width: 100%;
+  }
+}

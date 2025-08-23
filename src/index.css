@@ -66,3 +66,15 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  body {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}

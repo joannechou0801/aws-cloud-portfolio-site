@@ -63,3 +63,21 @@
 .lang-zh .about-section__attributes-list-item {
   margin-bottom: 0.8rem;
 }
+
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .about-section__content {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 0;
+  }
+
+  .about-section__column {
+    max-width: 100%;
+  }
+}

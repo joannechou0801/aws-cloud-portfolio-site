@@ -37,3 +37,11 @@
   color: #555;
   line-height: 1.4;
 }
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .skill-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
