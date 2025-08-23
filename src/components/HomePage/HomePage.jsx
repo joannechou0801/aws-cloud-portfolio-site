@@ -97,7 +97,7 @@ export default function HomePage() {
             >
               <SiHashnode />
             </a>
-            <a href="mailto:joannechou0801@gmail.com" aria-label="Email">
+            <a href="mailto:joanne.chou.pro@gmail.com" aria-label="Email">
               <FaEnvelope />
             </a>
           </div>
